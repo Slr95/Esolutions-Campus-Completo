@@ -1,0 +1,23 @@
+{
+  "name": "geo",
+  "version": "1.0.0",
+  "description": "Geolocation from client request's ip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "location",
+    "ip",
+    "request"
+  ],
+  "author": "Homero Simpson \\ <hsimpson@mail.com\\> (https://homero.com)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "request": "^2.60.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0"
+  }
+}

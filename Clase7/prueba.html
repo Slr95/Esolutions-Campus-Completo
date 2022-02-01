@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    <script>
+
+        window.addEventListener('unhandledrejection', function(event) { //window tira un mensaje diciendo algo
+            alert(event.promise)
+            alert(event.reason)
+        })
+
+        new Promise((resolve, reject) => {
+            throw new Error('Ay!')
+        })
+        .catch(error => {
+            if(error instanceof URIError) {
+                //AQUI MANEJAMOS ESE ERROR
+            } else {
+                console.log('No puedo manejar este error')
+                throw error
+            }
+        }).then( () => console.log('Esto no se deberia ejecutar'))
+        .catch(error => {
+            console.log(`Ocurrio un error desconocido: ${error}`)
+        })
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
